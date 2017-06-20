@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 export default class Header extends Component {
 
   render() {
     return (
-<div>
-  <Link to="/">Home/Link>
-  <Link to="/second">Go to Second Page</Link>
-  <Link to="/third">Third Page</Link>
-</div>
+      <ul className="nav nav-tabs">
+        <li><Link to="/" className="hotpink">Home</Link></li>
+        <li> <Link to="/second" id="pink">Second</Link></li>
+        <li> <Link to="/third" id="purple">Third</Link></li>
+      </ul>
     )
   }
 }
