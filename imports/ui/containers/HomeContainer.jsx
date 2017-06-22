@@ -4,11 +4,11 @@ import HomePage from '/imports/ui/pages/HomePage.jsx';
 import {Products} from '/imports/api/products/products.js';
 
 export default createContainer((props) => {
-  const productSub = Meteor.subscribe('all_products');
+  const productSub = Meteor.subscribe('list_products');
   let selector = {};
   let options = {sort: {rank: 1}};
 
-  const products = Products.find(selector, options).fetch();
+  const products = Products.find(selector).fetch();
   return {
     products: products,
     loading: !productSub.ready()

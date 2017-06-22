@@ -5,14 +5,24 @@ export default class SecondPage extends Component {
 
   render() {
     return (
-      <div>
-      <h1 className="ht">PAGE 2</h1>
-      <div className="alert alert-warning">
-        <h2 className="faf">TOTALLY COOL</h2>
+      <div className="container">
+        <div className="row">
+          <div className="text-center">
+            <img src="https://swchllc.s3.amazonaws.com/photos/cali_yogo-strawberry.jpg"></img>
+            <h2 className="text-center">Yogo Strawberry</h2>
+            <p className="lead">
+              <strong>Description: </strong>
+              Strawberries have been blended with the popular Japanese yogurt drink to bring you a refreshing all day vape.
+            </p>
+            <p className="lead">
+              <strong>Flavors: </strong>
+              strawberry | yogurt | creamy
+            </p>
+            <h2 className="text-center">$15.99 </h2>
+            <button className="btn btn-primary">Add To Cart</button>
+          </div>
+        </div>
       </div>
-    <Link to="/"><button className="btn btn-info bh">Go to Home Page</button></Link>
-    <Link to="/third"><button className="btn btn-danger b2">Go to Third Page</button></Link>
-    </div>
     )
   }
 }

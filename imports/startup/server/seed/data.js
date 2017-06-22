@@ -1,0 +1,59 @@
+import {Meteor} from 'meteor/meteor';
+import {Mongo} from 'meteor/mongo';
+import {Products} from '/imports/api/products/products.js';
+
+let data = [{
+  name: 'Cali Yogo',
+  image: 'https://swchllc.s3.amazonaws.com/photos/cali_yogo-strawberry.jpg',
+  price: 15.99,
+  flavors: ['strawberry', 'cream']
+},
+{
+  name: 'Mango',
+  image: 'https://swchllc.s3.amazonaws.com/products/salt/mango/0.png',
+  price: 19.99,
+  flavors: ['mango', 'spicy']
+},
+{
+  name: 'Apple Shake',
+  image: 'https://swchllc.s3.amazonaws.com/eliquids/milkshake_liquids-apple_shake.png',
+  price: 9.99,
+  flavors: ['caramel, chocolate']
+},
+{
+  name: 'Modzilla',
+  image: 'https://swchllc.s3.amazonaws.com/eliquids/modzilla-_nuclear_fruit_punch.png',
+  price: 29.99,
+  flavors: ['peppermint, chocolate']
+},
+{
+  name: 'Pop Deez',
+  image: 'https://swchllc.s3.amazonaws.com/eliquids/steep_vapors-pop_deez.png',
+  price: 19.99,
+  flavors: ['popcorn, cinammon']
+},
+{
+  name: 'POW',
+  image: 'https://swchllc.s3.amazonaws.com/photos/Binary_E_Liquid-Pow.jpg',
+  price: 14.99,
+  flavors: ['vanilla, dark chocolate, milk chocolate']
+}
+];
+
+console.log('inserting data');
+
+let checkProducts = Products.find({}).count();
+
+for(i = 0; i < data.length; i++){
+  let selector = {name: data[i].name};
+Products.upsert(selector, {$set: data[i]});
+}
+
+//console.warn('checkProducts ', checkProducts);
+
+
+//if(checkProducts == 0){
+//  for(i = 0; i < data.length; i++){
+//  Products.insert(data[i]);
+//  }
+//}

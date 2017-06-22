@@ -32,3 +32,8 @@ margin-left: 20px;
 .lm {
   font-family: monospace;
 }
+body {
+    background-color: snow;
+    color: black;
+    font-size: 1.1em;
+}
