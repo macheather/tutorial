@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
+import DeleteButton from '/imports/ui/components/Buttons/DeleteButton.jsx';
 
 
 export default class ProductGrid extends Component {
@@ -14,9 +15,13 @@ export default class ProductGrid extends Component {
         <h2 className="text-center">{product.name}</h2>
         <div className="text-center">
         <h2>  <span> ${product.price} </span> </h2>
-          <Link to={'/product/' + product._id}>
-            <button className="btn btn-primary">Buy Now</button>
+          <Link to={'/edit/' + product._id}>
+            <button className="btn btn-primary">Edit</button>
           </Link>
+          {/* <EditButtons/> */}
+          <br></br>
+          <DeleteButton productID ={product._id}/>
+
       </div>
       </div>
 

@@ -27,7 +27,7 @@ export default class ProductInsert extends Component {
               this.refs.name.value ="";
               this.refs.photo.value ="";
               this.refs.description.value ="";
-              this.refs.volue.value ="";
+              this.refs.volume.value ="";
               this.refs.price.value ="";
       }
       else{

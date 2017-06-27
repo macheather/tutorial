@@ -1,15 +1,15 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
-import { check } from 'meteor/check';
+// import { check } from 'meteor/check';
 import { Products } from '/imports/api/products/products.js';
 
 Meteor.methods({
-  deleteProduct: function(product_id) {
+  deleteproduct: function(productID) {
 
-    let deleteId = Products.remove(product_id);
-    console.log("deleteId", deleteId);
+    let product = Products.remove(productID);
+    console.log("deleteId", product);
 
-    if(deleteId) {
+    if(product) {
       return "Success!!";
     } else {
       return "Error!!";
