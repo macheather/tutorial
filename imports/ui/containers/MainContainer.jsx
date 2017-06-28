@@ -1,13 +1,17 @@
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
-import MainLayout from '../layouts/MainLayout.jsx';
+import MainLayout from '/imports/ui/layouts/MainLayout.jsx';
 
+export default createContainer((props) => {
 
-//this just checks if we have a current user logged in and sends it to main layout
-export default createContainer(() => {
-  const currentUser = Meteor.user();
+  let userSub = Meteor.subscribe('current_user');
+
+  let user = Meteor.user();
+
   return {
-    isLoggedIn: !!Meteor.userId(),
-    currentUser: Meteor.user(),
+    loading: !userSub.ready(),
+    user: user,
+    isLoggedIn: !!Meteor.userId()
   };
+
 }, MainLayout);
