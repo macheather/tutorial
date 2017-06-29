@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import { browserHistory } from 'react-router';
+
 export default class SignIn extends Component {
+
   render() {
+
     let submitSignIn = () => {
       const password = this.refs.password.value.trim();
       const email = this.refs.email.value.trim();
-      
+
       Meteor.loginWithPassword(email, password, (error) => {
         if (error) {
           return Bert.alert('Invalid Email Address and/or Password. Please try again.', 'danger', 'fixed-top', 'fa-frown-o');
