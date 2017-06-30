@@ -37,3 +37,7 @@ body {
     color: black;
     font-size: 1.1em;
 }
+.lineBreak {
+  border-style: solid;
+  border-color: #000;
+}
