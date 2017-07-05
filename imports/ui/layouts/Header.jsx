@@ -18,6 +18,7 @@ export default class Header extends Component {
           <li><Link to="/" className="hotpink">Home</Link></li>
           <li> <Link to="/signup" id="pink">Sign Up</Link></li>
           <li> <Link to="/signin" id="purple">Sign In</Link></li>
+          <li><Link to="/drops" className="lightblue">Mass Drops</Link></li>
         </ul>
       </div>
       <div className="col-sm-4" style={{textAlign: 'right'}}>

@@ -12,6 +12,8 @@ import AdminContainer from '/imports/ui/containers/AdminContainer.jsx';
 import SignUp from '/imports/ui/pages/SignUp.jsx';
 import SignIn from '/imports/ui/pages/SignIn.jsx';
 import LoginSignup from '/imports/ui/pages/LoginSignup.jsx';
+import DropsContainer from '/imports/ui/containers/DropsContainer.jsx';
+import OneDropContainer from '/imports/ui/containers/OneDropContainer.jsx';
 
 //we're using react router
 export default () => (
@@ -20,6 +22,8 @@ export default () => (
     <Route path="/" component={HomeContainer}/>
     <Route path="/product/:id" component={ProductContainer}/>
     <Route path="/edit/:id" component={ProductEditContainer}/>
+    <Route path="/drops" component={DropsContainer}/>
+    <Route path="/drop/:product_id" component={OneDropContainer}/>
     <Route path="/insert" component={ProductInsert}/>
     <Route path="/admin" component={AdminContainer} />
     <Route path="/signup" component={SignUp} />
