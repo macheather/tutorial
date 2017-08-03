@@ -7,11 +7,11 @@ export default class SignIn extends Component {
 
     let submitSignIn = () => {
       const password = this.refs.password.value.trim();
-      const email = this.refs.email.value.trim();
+      const username = this.refs.username.value.trim();
 
       Meteor.loginWithPassword(email, password, (error) => {
         if (error) {
-          return Bert.alert('Invalid Email Address and/or Password. Please try again.', 'danger', 'fixed-top', 'fa-frown-o');
+          return Bert.alert('Invalid Username and/or Password. Please try again.', 'danger', 'fixed-top', 'fa-frown-o');
         } else {
           browserHistory.push('/')
         }
@@ -21,9 +21,9 @@ export default class SignIn extends Component {
     return (
       <div className="form-horizontal">
         <div className="form-group">
-          <label htmlFor="inputEmail3" className="col-sm-2 control-label">Email</label>
+          <label htmlFor="inputUsername" className="col-sm-2 control-label">Username</label>
           <div className="col-sm-10">
-            <input ref="email" type="email" className="form-control" id="inputEmail3" placeholder="Email"/>
+            <input ref="username" type="username" className="form-control" id="inputUsername" placeholder="Username"/>
           </div>
         </div>
         <div className="form-group">

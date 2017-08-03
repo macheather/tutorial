@@ -10,7 +10,7 @@ export default createContainer((props) => {
 
   return {
     loading: !userSub.ready(),
-    user: user,
+    currentUser: user,
     isLoggedIn: !!Meteor.userId()
   };
 

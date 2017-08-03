@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import accounting from 'accounting';
 import AddReview from '../Reviews/AddReview.jsx';
 import ProductReviews from '../Reviews/ProductReviews.jsx';
+import AddWishlist from '../Wishlist/AddWishlist.jsx';
 
 export default class ProductDetails extends Component {
   render() {
@@ -35,6 +36,7 @@ export default class ProductDetails extends Component {
 
             <h2 className="text-center">{accounting.formatMoney(product.price)}</h2>
             <button className="btn btn-primary">Add To Cart</button>
+            <AddWishlist product={product}/>
           </div>
         </div>
         <div className= "text-center">

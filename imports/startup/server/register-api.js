@@ -15,3 +15,8 @@ import '/imports/api/droporders/droporders.js';
 import '/imports/api/massdrops/server/publications/list_drops.js';
 import '/imports/api/massdrops/server/methods/add_participant.js'
 import '/imports/api/massdrops/server/publications/one_drop.js';
+
+//Wishlist
+import '/imports/api/wishlist/publications/list_wishlist.js';
+import '/imports/api/wishlist/methods/add_wishlist.js';
+import '/imports/api/wishlist/wishlist.js';
